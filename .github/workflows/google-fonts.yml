@@ -48,12 +48,12 @@ jobs:
 
       - name: Configure Git user
         id: git-user-config
-        uses: Homebrew/actions/git-user-config@main
+        uses: Homebrew/actions/git-user-config@d4a9d3894e99dfb50a41c089a3dfcbd6009152a1 # main
         with:
           username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
 
       - name: Set up commit signing
-        uses: Homebrew/actions/setup-commit-signing@main
+        uses: Homebrew/actions/setup-commit-signing@d4a9d3894e99dfb50a41c089a3dfcbd6009152a1 # main
         with:
           signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
 
@@ -94,7 +94,7 @@ jobs:
 
       - name: Push commits
         if: env.changes == 'true'
-        uses: Homebrew/actions/git-try-push@main
+        uses: Homebrew/actions/git-try-push@d4a9d3894e99dfb50a41c089a3dfcbd6009152a1 # main
         with:
           token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           branch: "auto-${{ matrix.mode }}-google-fonts"
