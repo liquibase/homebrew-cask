@@ -1,3 +1,15 @@
+> ## ⚠️ Archived — no longer maintained
+>
+> This repository is a Liquibase fork/mirror of [Homebrew/homebrew-cask](https://github.com/Homebrew/homebrew-cask). It was used as a staging/build mirror for Liquibase's Homebrew distribution.
+>
+> **It is no longer needed.** Liquibase Secure is now published as a cask in the **official upstream** [Homebrew/homebrew-cask](https://github.com/Homebrew/homebrew-cask/blob/master/Casks/l/liquibase-secure.rb) and installed directly with:
+>
+> ```
+> brew install --cask liquibase-secure
+> ```
+>
+> This fork holds no Liquibase-specific content (it only mirrors upstream casks), is not kept in sync with upstream, and is intentionally excluded from the org-wide GitHub Actions SHA-pinning enforcement (TECHOPS-646). Retained for reference only. Confirmed unneeded by the DevOps team, June 2026.
+
 # Homebrew Cask
 
 _“To install, drag this icon…” no more!_
